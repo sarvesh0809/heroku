@@ -1,0 +1,214 @@
+
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: ASSISTANT;
+  background: #262626;
+}
+
+ul.pre-loader {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+
+ul.pre-loader li {
+  list-style: none;
+  color: #484848;
+  display: inline;
+  font-size: 5em;
+  letter-spacing: 15px;
+  animation: pre-load 3s linear infinite;
+}
+
+@keyframes pre-load {
+  
+  0% {
+    color: #484848;
+    text-shadow: none;
+  }
+  
+  20% {
+    color: #484848;
+    text-shadow: none;
+  }
+  
+  40% {
+    color: #df1e2f;
+    text-shadow: 0 0 7px #df1e2f, 0 0 50px #df1e2f;
+  }
+  
+  60% {
+    color: #484848;
+    text-shadow: none;
+  }
+  
+  80% {
+    color: #484848;
+    text-shadow: none;
+  }
+  
+  100% {
+    color: #484848;
+    text-shadow: none;
+  }
+  
+}
+
+ul li:nth-child(1) {
+  animation-delay: .2s;
+}
+
+ul.pre-loader li:nth-child(2) {
+  animation-delay: .4s;
+}
+
+ul.pre-loader li:nth-child(3) {
+  animation-delay: .6s;
+}
+
+ul.pre-loader li:nth-child(4) {
+  animation-delay: .8s;
+}
+
+ul.pre-loader li:nth-child(5) {
+  animation-delay: 1s;
+}
+
+ul.pre-loader li:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+ul.pre-loader li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+@media screen and (max-width: 980px) {
+  
+  ul.pre-loader li {
+    font-size: 30px;
+    letter-spacing: 0;
+  }
+  
+}
+p {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  color: palevioletred;
+}
+a.soop{
+    position: absolute;
+    display: inline-block;
+    top: 65%;
+    left: 43%;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    overflow: hidden;
+    margin-right: 50px;
+}
+
+a.soop:hover{
+    background: #03e9f4;
+    color: #2A2A2A;
+    box-shadow: 0 0 5px #03e9f4,
+     0 0 25px #03e9f4,
+      0 0 50px #03e9f4 ,
+       0 0 200px #03e9f4;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+a.soop span{
+    position: absolute;
+    display: block;
+}
+
+a.soop span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+
+    50%, 100%{
+        left: 100%;
+    }
+}
+
+a.soop span:nth-child(2){
+    top: -100px;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+
+    50%, 100%{
+        top: 100%;
+    }
+}
+
+a.soop span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+
+    50%, 100%{
+        right: 100%;
+    }
+}
+
+a.soop span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+
+    50%, 100%{
+        bottom: 100%;
+    }
+}

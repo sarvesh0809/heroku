@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Services{% endblock title %}
+{% block body %}
+<div class="table-responsive">
+    <table class="table table-dark table-striped table-sm">
+        <tr>
+            <td><strong>Coins</strong></td>
+            <td><strong>Price</strong></td>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.coins}}</td>
+            <td>{{i.price}}</td>
+        </tr>
+        {% endfor %}
+        
+    </table>
+</div>
+
+{% endblock body %}

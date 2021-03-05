@@ -1,0 +1,337 @@
+
+:root {
+    scroll-behavior: smooth;
+    margin-bottom: 10%;
+}
+.alert {
+  position: absolute;
+  padding: 1rem 1rem;
+  margin-bottom: 1;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.alert-dismissible .btn-close {
+  color: #111;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  padding: 1.25rem 0rem;
+  display: flex;
+}
+.form-label {
+  margin-bottom: .5rem;
+  color: deeppink;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Cherry+Swash);
+
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+
+.container {
+  position: relative;
+  margin-top: 100px;
+}
+
+.container img {
+  display: block;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  z-index: 8;
+  left: 0;
+  right: 0;
+  top: 0;
+  font-family: 'Montserrat', sans-serif;
+  padding: 0 5%;
+  height: 70px;
+  background-color: #950740;
+  
+}
+
+nav .logo {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav .links li {
+  list-style: none;
+}
+
+nav .links a {
+  display: block;
+  padding: 1em;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all .3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  nav .logo {
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+
+  nav .links {
+    float: none;
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 70px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, .8);
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s ease-in-out;
+  }
+
+  nav .links a {
+    font-size: 20px;
+  }
+
+  nav :checked~.links {
+    bottom: 0;
+  }
+
+  nav .icon-burger {
+    display: block;
+  }
+
+  nav :checked~.icon-burger .line:nth-child(1) {
+    transform: translateY(10px) rotate(225deg);
+  }
+
+  nav :checked~.icon-burger .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-225deg);
+  }
+
+  nav :checked~.icon-burger .line:nth-child(2) {
+    opacity: 0;
+  }
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+
+/* 
+body {
+color: #333;
+font-family: "Raleway", Arial, Helvetica, serif;
+font-weight: normal;
+margin: 0;
+padding: 0;
+background: url(https://josetxu.com/img/fondo_blanco.png) repeat 0 0 #fff; */
+/* } */
+
+h1 {
+  /* background: #333; */
+  font-family: 'Cherry Swash';
+  color: #fff;
+  text-align: center;
+  animation: neon 1s ease-in-out infinite alternate;
+  margin: 0 0 5% 0;
+  padding: 2em;
+  margin: 3% -1% 0 0;
+}
+h2{
+  font-family: 'Cherry Swash';
+  color: #fff;
+  text-align: center;
+  animation: neon 1s ease-in-out infinite alternate;
+  margin: 0 0 5% 0;
+  padding: 2em;
+  margin: 3% -1% 0 0;
+  padding-top: 45rem;
+
+}
+@keyframes neon {
+  from {
+    text-shadow: 0 0 35px #950740,
+      0 0 40px #950740,
+      0 0 55px #e4ccdc;
+  }
+}
+
+  h3 {
+    margin-top: 30%;
+    margin-bottom: 0rem;
+
+  }
+
+  .cardBox {
+
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+  }
+
+  .cardBox:hover .card {
+    transform: rotateY(180deg);
+  }
+
+  .card {
+    background: #3e3e3e;
+    cursor: default;
+    height: 300px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+  }
+
+  .card p {
+
+    margin-top: 7%;
+    margin-bottom: 0;
+
+  }
+
+  .card .front,
+  .card .back {
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    color: white;
+    display: block;
+    font-size: 0.7em;
+
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+  }
+
+
+
+  .card .back {
+    transform: rotateY(180deg);
+  }
+
+  .card .back a {
+  
+    text-align: center;
+    padding: 0.3em 0.9em;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 9px;
+    font-size: 0.9em;
+    transition: all 0.2s ease 0.5s;
+    position: absolute;
+    bottom: 0;
+    margin-left: -40px ;
+  }
+
+  .card .back a:hover {
+
+    color: #111;
+    background: #950740;
+    box-shadow: 0 0 60px #950740;
+  }
+
+  @-webkit-keyframes giro {
+    from {
+      transform: rotateY(180deg);
+      transform: rotateZ(180deg);
+    }
+
+    to {
+      transform: rotateY(0deg);
+      transform: rotateZ(0deg);
+    }
+  }
+
+  @keyframes giro {
+    from {
+      transform: rotateZ(180deg);
+    }
+
+    to {
+      transform: rotateZ(0deg);
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .cardBox {
+      margin-left: 2.8%;
+      margin-top: 3%;
+      width: 46%;
+    }
+
+    .card {
+      height: 285px;
+    }
+
+    .cardBox:last-child {
+      margin-bottom: 3%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .cardBox {
+      width: 94.5%;
+    }
+
+    .card {
+      height: 260px;
+    }
+  }
